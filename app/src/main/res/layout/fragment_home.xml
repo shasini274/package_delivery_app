@@ -7,16 +7,44 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:id="@+id/home_on_the_way"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/home_pending"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/HomeButtonStyle" />
+
+    <TextView
+        android:id="@+id/home_pending"
+        style="@style/HomeButtonStyle"
+        android:fontFamily="@font/roboto"
+        android:text="@string/text_home_pending"
+        app:layout_constraintBaseline_toBaselineOf="@+id/home_on_the_way"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_on_the_way" />
+
+    <ImageView
+        android:id="@+id/map_image"
+        android:layout_width="411dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_on_the_way"
+        android:src="@drawable/ic_menu_driver" />
+
+    <ListView
+        android:id="@+id/package_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_image"
+        android:entries="@array/package_ontheway_vendor_array" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

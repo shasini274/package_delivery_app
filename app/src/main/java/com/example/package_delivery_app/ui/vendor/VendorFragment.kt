@@ -1,4 +1,4 @@
-package com.example.package_delivery_app.ui.gallery
+package com.example.package_delivery_app.ui.vendor
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.package_delivery_app.R
 
-class GalleryFragment : Fragment() {
+class VendorFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
+    private lateinit var vendorViewModel: VendorViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-                ViewModelProvider(this).get(GalleryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
-        val textView: TextView = root.findViewById(R.id.text_gallery)
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        vendorViewModel =
+                ViewModelProvider(this).get(VendorViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_vendor, container, false)
+        val textView: TextView = root.findViewById(R.id.text_vendor)
+        vendorViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

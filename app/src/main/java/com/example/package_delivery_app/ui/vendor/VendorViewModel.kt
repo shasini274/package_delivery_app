@@ -1,13 +1,13 @@
-package com.example.package_delivery_app.ui.slideshow
+package com.example.package_delivery_app.ui.vendor
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class VendorViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "This is vendor Fragment"
     }
     val text: LiveData<String> = _text
 }

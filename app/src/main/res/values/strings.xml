@@ -8,6 +8,25 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_vendor">Vendor</string>
+    <string name="menu_building">Building</string>
+    <string name="menu_driver">Driver</string>
+    <string name="menu_history">History</string>
+    <string name="text_home_pending">Pending</string>
+
+    <string-array name="package_ontheway_vendor_array">
+        <item>Vendor1</item>
+        <item>Vendor2</item>
+        <item>Vendor3</item>
+        <item>Vendor4</item>
+        <item>Vendor5</item>
+    </string-array>
+    <string-array name="package_ontheway_building_array">
+        <item>Building1</item>
+        <item>Building2</item>
+        <item>Building3</item>
+        <item>Building4</item>
+        <item>Building5</item>
+    </string-array>
+
 </resources>
