@@ -29,13 +29,33 @@ class HomeFragment : Fragment() {
             textView.text = it
         })
 
-        // get package data and show in listView, need to get data from database later using SimpleCursorAdapter 
+        // get package data and show in listView, need to get data from database later using SimpleCursorAdapter
         val vendorArray = resources.getStringArray(R.array.package_ontheway_vendor_array)
-        val arrayAdapter1 = this.context?.let { ArrayAdapter<String>(
-                it, android.R.layout.simple_expandable_list_item_1, vendorArray) }
-
+        val buildingArray = resources.getStringArray(R.array.package_ontheway_building_array)
         val listview1 = root.findViewById<ListView>(R.id.package_listView)
-        listview1.adapter = arrayAdapter1
+        val packageList = ArrayList<HashMap<String, String>>()
+
+        //val arrayAdapter1 = this.context?.let { ArrayAdapter<String>(it, android.R.layout.simple_expandable_list_item_1, vendorArray) } // single string
+        for (i in vendorArray.indices) {
+            val map = HashMap<String, String>()
+
+            // data entry in HashMap
+            map["vendor"] = vendorArray[i]
+            map["building"] = buildingArray[i]
+
+            // add the HashMap to ArrayList
+            packageList.add(map)
+        }
+
+        //fourth parameter of SimpleAdapter
+        val from = arrayOf("vendor", "building")
+        //fifth parameter of SimpleAdapter
+        val to = intArrayOf(R.id.home_ontheway_vendor, R.id.home_ontheway_building)
+
+        val simpleAdapter = this.context?.let { SimpleAdapter (it, packageList, R.layout.package_list_ontheway, from, to) }
+
+
+        listview1.adapter = simpleAdapter
         //listview1.setOnItemClickListener() {adapterView, view, position: Int, id -> Toast.makeText(this.context, "Working on it", Toast.LENGTH_LONG).show()}
         //for (item in listview1) { item.setOnClickListener {it.setBackgroundColor(Color.GRAY)} }
 

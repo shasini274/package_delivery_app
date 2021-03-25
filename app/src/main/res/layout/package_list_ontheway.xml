@@ -4,26 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/home_ontheway_vendor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/PackageListStyle"
         android:text="vendor"
         android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/home_ontheway_building"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_package_list_arrow"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/image_package_list_arrow"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_package_list_arrow"
+        app:layout_constraintEnd_toStartOf="@+id/home_ontheway_building"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_ontheway_vendor"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/home_ontheway_building"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/PackageListStyle"
         android:text="building"
-        android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@+id/home_ontheway_vendor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/home_ontheway_vendor" />
+        app:layout_constraintStart_toEndOf="@id/image_package_list_arrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
