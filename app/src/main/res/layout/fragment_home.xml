@@ -7,26 +7,31 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/home_on_the_way"
+        android:id="@+id/home_ontheway_btn"
+        style="@style/HomeButtonStyle"
+        android:text="@string/text_home_on_the_way"
+        android:clickable="true"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/home_pending"
+        app:layout_constraintEnd_toStartOf="@+id/home_pending_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        style="@style/HomeButtonStyle" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/home_pending"
+        android:id="@+id/home_pending_btn"
         style="@style/HomeButtonStyle"
         android:fontFamily="@font/roboto"
         android:text="@string/text_home_pending"
-        app:layout_constraintBaseline_toBaselineOf="@+id/home_on_the_way"
+        android:clickable="true"
+        android:background="@color/grey_light"
+        app:layout_constraintBaseline_toBaselineOf="@+id/home_ontheway_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/home_on_the_way" />
+        app:layout_constraintStart_toEndOf="@+id/home_ontheway_btn" />
 
     <ImageView
         android:id="@+id/map_image"
@@ -34,16 +39,25 @@
         android:layout_height="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_on_the_way"
+        app:layout_constraintTop_toBottomOf="@+id/home_ontheway_btn"
         android:src="@drawable/ic_menu_driver" />
+
 
     <ListView
         android:id="@+id/package_listView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:divider="@color/grey_very_light"
+        android:dividerHeight="3dp"
+        android:focusable="true"
+        android:nestedScrollingEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map_image" />
+        app:layout_constraintTop_toBottomOf="@+id/map_image"/>
 
+
+    <include layout="@layout/floating_action_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

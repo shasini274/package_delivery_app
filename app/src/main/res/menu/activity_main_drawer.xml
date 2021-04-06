@@ -24,5 +24,9 @@
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_menu_history"
             android:title="@string/menu_history" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_account"
+            android:title="Account" />
     </group>
 </menu>

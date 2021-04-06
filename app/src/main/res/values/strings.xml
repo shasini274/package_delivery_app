@@ -12,21 +12,42 @@
     <string name="menu_building">Building</string>
     <string name="menu_driver">Driver</string>
     <string name="menu_history">History</string>
+    <string name="menu_account">Account</string>
     <string name="text_home_pending">Pending</string>
+    <string name="text_home_on_the_way">On the Way</string>
 
     <string-array name="package_ontheway_vendor_array">
-        <item>Vendor1</item>
-        <item>Vendor2</item>
-        <item>Vendor3</item>
-        <item>Vendor4</item>
-        <item>Vendor5</item>
+        <item>IKEA Southampton</item>
+        <item>Buck and Hickman</item>
+        <item>Howdens</item>
+        <item>Eurocell</item>
+        <item>Hampshire Ltd</item>
+        <item>Solent Stevedores Ltd</item>
+        <item>Solent Stevedores Ltd</item>
     </string-array>
     <string-array name="package_ontheway_building_array">
-        <item>Building1</item>
-        <item>Building2</item>
-        <item>Building3</item>
-        <item>Building4</item>
-        <item>Building5</item>
+        <item>Mayflower Halls</item>
+        <item>Southampton Port</item>
+        <item>The Civic Centre</item>
+        <item>Avenue Campus</item>
+        <item>Highfield Campus</item>
+        <item>King Edward School</item>
+        <item>King Edward School</item>
     </string-array>
+    <string-array name="package_ontheway_driver_array">
+        <item>Basel Halak</item>
+        <item>Geoff Merrett</item>
+        <item>Kirk Martinez</item>
+        <item>Ruomeng Huang</item>
+        <item>Alex S Weddell</item>
+        <item>Mohammed El-Hajjar</item>
+        <item>Mohammed El-Hajjar</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_package_fragment">Package</string>
+    <string name="label_new_item_fragment">New Package</string>
+
 
 </resources>

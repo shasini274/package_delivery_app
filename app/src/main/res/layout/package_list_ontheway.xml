@@ -7,35 +7,55 @@
     android:background="@color/white"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/home_ontheway_vendor"
-        style="@style/PackageListStyle"
-        android:text="vendor"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/image_package_list_arrow"
+    <ImageView
+        android:id="@+id/image_green_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_home_package_list_dot_green"
+        app:layout_constraintEnd_toStartOf="@+id/home_ontheway_vendor_text"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_orange_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_home_package_list_dot_orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_green_dot" />
+
+    <TextView
+        android:id="@+id/home_ontheway_vendor_text"
+        style="@style/PackageListStyle"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="vendor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_green_dot"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/image_package_list_arrow"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_package_list_arrow"
-        app:layout_constraintEnd_toStartOf="@+id/home_ontheway_building"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/home_ontheway_vendor"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/home_ontheway_building_text"
+        style="@style/PackageListStyle"
+        android:layout_marginStart="8dp"
+        android:text="building"
+        app:layout_constraintStart_toEndOf="@+id/image_orange_dot"
+        app:layout_constraintTop_toBottomOf="@+id/home_ontheway_vendor_text" />
 
     <TextView
-        android:id="@+id/home_ontheway_building"
-        style="@style/PackageListStyle"
-        android:text="building"
+        android:id="@+id/home_ontheway_driver_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="driver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image_package_list_arrow"
+        app:layout_constraintStart_toEndOf="@+id/home_ontheway_vendor_text"
         app:layout_constraintTop_toTopOf="parent" />
 
 
