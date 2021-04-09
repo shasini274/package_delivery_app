@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Package_delivery_app" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/grey_light</item>
-        <item name="colorPrimaryVariant">@color/grey_light</item>
+        <item name="colorPrimary">@color/teal_dark</item>
+        <item name="colorPrimaryVariant">@color/teal_dark</item>
         <item name="colorOnPrimary">#B54444</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal</item>
