@@ -76,15 +76,5 @@
     <string name="label_package_fragment">Package</string>
     <string name="label_new_item_fragment">New Package</string>
 
-<!--    <string name="app_name">Affirmations</string>-->
-    <string name="affirmation1">Basel Halak</string>
-    <string name="affirmation2">Geoff Merrett</string>
-    <string name="affirmation3">Kirk Martinez</string>
-    <string name="affirmation4">Ruomeng Huang</string>
-    <string name="affirmation5">Alex S Weddell</string>
-    <string name="affirmation6">Mohammed El-Hajjar</string>
-    <string name="affirmation7">Mohammed El-Hajjar</string>
-    <string name="affirmation8">Shasini Umesha</string>
-    <string name="affirmation9">Yifei Shi</string>
-    <string name="affirmation10">Wu Si</string>
+
 </resources>
