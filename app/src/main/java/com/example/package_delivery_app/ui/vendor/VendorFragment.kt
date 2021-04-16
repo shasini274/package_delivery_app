@@ -1,9 +1,11 @@
 package com.example.package_delivery_app.ui.vendor
 
+import android.graphics.Paint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -35,6 +37,14 @@ class VendorFragment : Fragment() {
             Navigation.findNavController(view).navigate(VendorFragmentDirections.actionNavVendorToAddNewItemFragment(itemType))
             //Navigation.findNavController(view).navigate(HomeFragmentDirections.actionNavHomeToPackageDetailFragment(100))
         }
+
+/*
+        // add underline
+        val test1: TextView = root.findViewById(R.id.test_btn1)
+        test1?.setOnClickListener {
+            test1.paintFlags = Paint.UNDERLINE_TEXT_FLAG
+        }
+*/
 
         return root
     }
